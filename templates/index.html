@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>OneClick Insights Generator</title>
+
+    <!-- Bootstrap 5 + Font Awesome 6 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- App theme -->
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark px-3">
+      <span class="navbar-brand mb-0 h1 neon-title"><i class="fa-solid fa-bolt"></i> OneClick Insights Generator</span>
+    </nav>
+
+    <div class="container my-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">
+              <strong>Upload your CSV</strong>
+            </div>
+            <div class="card-body">
+              <p class="text-secondary mb-2">Drop a single CSV below or use the file picker.</p>
+              <div class="d-flex gap-2 align-items-center mb-2">
+                <label class="btn btn-neon btn-sm mb-0" for="file-input">
+                  <i class="fa-solid fa-file-arrow-up me-2"></i>Choose File
+                </label>
+                <input id="file-input" type="file" name="file" accept=".csv" hidden>
+                <span id="status" class="badge badge-soft d-none">
+                  <i class="fa-solid fa-circle-check me-1"></i>Dataset loaded
+                </span>
+              </div>
+
+              <div id="dropzone" class="dropzone">
+                <i class="fa-solid fa-cloud-arrow-up fa-2x mb-2" style="color:#00e5ff;"></i>
+                <div>Drag &amp; drop CSV here</div>
+              </div>
+
+              <div class="mt-3">
+                <button id="generate-btn" class="btn btn-neon">
+                  <i class="fa-solid fa-wand-magic-sparkles me-2"></i>Generate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-end mt-3">
+            <small class="text-secondary">Only one CSV at a time.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="loadingOverlay">
+      <div class="box">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border text-info" role="status" aria-hidden="true"></div>
+        </div>
+        <div class="msg mt-2">Please wait. Report is getting generated...</div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

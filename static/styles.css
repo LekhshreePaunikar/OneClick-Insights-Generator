@@ -1,0 +1,120 @@
+/* OneClick Insights - Neon Noir (black + neon blue) */
+:root{
+  --bg:#0b0f1a; /* deep black-blue */
+  --panel:#0e1424;
+  --text:#e6f1ff; /* soft white-blue */
+  --muted:#8aa4c7;
+  --neon:#00e5ff; /* cyan glow */
+  --neon2:#4df3ff;
+  --border:#1b2945;
+}
+
+html,body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+a, .link { color: var(--neon); }
+a:hover  { color: var(--neon2); text-decoration: underline; }
+
+.navbar, .card{
+  background:linear-gradient(180deg, rgba(20,28,48,.8), rgba(10,14,26,.9));
+  border:1px solid var(--border);
+  box-shadow: 0 0 0.5rem rgba(0,229,255,.08), 0 0 1.2rem rgba(0,229,255,.06) inset;
+}
+
+.card-header{
+  border-bottom:1px solid var(--border);
+  color:var(--text);
+  text-shadow: 0 0 .4rem rgba(0,229,255,.4);
+}
+
+.btn-neon{
+  background: radial-gradient(120% 120% at 50% 0%, rgba(0,229,255,.25), rgba(0,0,0,0));
+  border:1px solid var(--neon);
+  color:var(--text);
+  transition: transform .05s ease, box-shadow .2s ease;
+}
+.btn-neon:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 0 .7rem rgba(0,229,255,.6), 0 0 1.6rem rgba(0,229,255,.2);
+  color:var(--text);
+}
+
+.badge-soft{
+  background:rgba(0,229,255,.12);
+  color:var(--neon2);
+  border:1px solid rgba(0,229,255,.35);
+}
+
+.dropzone{
+  border:2px dashed var(--neon);
+  border-radius:.75rem;
+  padding:2.25rem;
+  text-align:center;
+  color:var(--muted);
+  background: rgba(0,229,255,.02);
+  transition: background .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.dropzone.dragover{
+  background: rgba(0,229,255,.06);
+  box-shadow: 0 0 .7rem rgba(0,229,255,.5);
+  border-color: var(--neon2);
+  color: var(--text);
+}
+
+.img-glow{
+  border-radius:.5rem;
+  border:1px solid var(--border);
+  box-shadow: 0 0 .6rem rgba(0,229,255,.25);
+}
+
+/* Collapsible details */
+details summary{
+  cursor:pointer;
+  color:var(--neon);
+}
+details{
+  border:1px dashed var(--border);
+  border-radius:.5rem;
+  padding:.5rem .75rem;
+  background:rgba(0,229,255,.02);
+}
+
+/* Loading overlay */
+#loadingOverlay{
+  position:fixed; inset:0; z-index:9999;
+  display:none;
+  align-items:center; justify-content:center;
+  background:rgba(3,6,12,.76);
+  backdrop-filter: blur(2px);
+}
+#loadingOverlay .box{
+  text-align:center;
+  padding:1.5rem 2rem;
+  border:1px solid var(--border);
+  border-radius:.75rem;
+  background:linear-gradient(180deg, rgba(14,20,36,.95), rgba(8,12,22,.92));
+  box-shadow: 0 0 1rem rgba(0,229,255,.18);
+  color:var(--text);
+}
+#loadingOverlay .msg{
+  margin-top:.75rem; color:var(--muted);
+}
+.neon-title{
+  text-shadow: 0 0 .65rem rgba(0,229,255,.5);
+}
+
+/* Headings spacing */
+h1,h2,h3,h4{ margin-top:1.25rem; }
+
+/* Tables in README HTML */
+table{
+  border-collapse: collapse;
+  width:100%;
+}
+table th, table td{
+  padding:.4rem .6rem;
+  border:1px solid var(--border);
+}
+table th{ background: rgba(0,229,255,.06); }
