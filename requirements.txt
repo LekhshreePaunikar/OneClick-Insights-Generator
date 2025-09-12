@@ -1,0 +1,11 @@
+Flask
+python-dotenv
+markdown2
+pandas
+matplotlib
+seaborn
+openai==0.28.1
+chardet
+scipy
+numpy
+joypy
