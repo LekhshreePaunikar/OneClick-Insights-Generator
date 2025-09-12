@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+# Virtualenv
+.venv/
+# Environment
+.env
+# Runtime artifacts
+uploads/
+*.png
+*/*.png
+*/README.md
+# CSV and PNG files
+*.csv
+*.png
