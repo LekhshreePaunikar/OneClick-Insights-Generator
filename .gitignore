@@ -11,5 +11,5 @@ uploads/
 */*.png
 */README.md
 # CSV and PNG files
-*.csv
-*.png
+# *.csv
+# *.png
