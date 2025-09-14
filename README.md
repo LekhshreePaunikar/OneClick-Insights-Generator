@@ -3,11 +3,13 @@
 
 ## 1) Problem identified, one-click solution, and user value
 **The real-world pain:** As AI and data science grow inside teams, the first mile of analysis (getting from “here’s a CSV” to “here are the insights”) is still repetitive: fix encodings, scan missing values/outliers, try a few plots, and then write a narrative for stakeholders. This costs hours per dataset and produces inconsistent quality.
+
 **My one-click solution:** I upload a CSV and press `[Generate]`. The app automatically:
 - Profiles the data (missing values, outliers, correlations).
 - Creates clean visualizations (scatter, histogram + density, correlation heatmap).
 - Produces a structured README with **LLM-written insights** and next steps (≥5 per figure).
 - Renders the report so each figure appears beside its insights (no duplication, nothing left out).
+- 
 **Who benefits:** Analysts, PMs, founders, and domain experts who want **fast, repeatable, decision-oriented analysis** without writing code every time.
 
 ## 2) User persona, use cases, and expected outcomes
